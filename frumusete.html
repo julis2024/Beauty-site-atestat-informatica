@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frumusețe - Eleganță, Frumusețe și Călătorii</title>
+  <link rel="stylesheet" href="design_pagina.css">
+  <script src="functionalitati.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav container">
+      <h2 class="nav_logo"><a href="index.html">Eleganță, Frumusețe și Călătorii</a></h2>
+      <ul class="menu_items">
+        <li><a href="moda.html" class="nav_link">Moda</a></li>
+        <li><a href="frumusete.html" class="nav_link active">Frumusețe</a></li>
+        <li><a href="calatorii.html" class="nav_link">Călătorii</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-mod">
+    <section class="frumusete-intro">
+      <h1>Bun venit în lumea frumuseții!</h1>
+      <p>Explorează ultimele trenduri în îngrijirea pielii, machiaj și parfumuri sofisticate!</p>
+    </section>
+
+    <section class="frumusete-grid">
+
+      <article class="card">
+        <img src="makeup2.webp" alt="Machiaj" class="card-img">
+        <h2>Secretele unui machiaj perfect</h2>
+        <p>Machiajul perfect este mai mult decât o tehnică - este o artă care îți pune în valoare frumusețea naturală și îți oferă încrederea de care ai nevoie în fiecare zi. Cu pași simpli și produsele potrivite, îți poți crea un look impecabil care să dureze întreaga zi.</p>
+        <button class="btn" data-info="Machiajul flawless începe cu o piele bine pregătită: curăță fața, aplică toner, ser hidratant și cremă de zi. Alege un primer potrivit pentru tipul de ten, apoi aplică un fond de ten și un corector pentru imperfecțiuni. Fixează totul cu pudră translucidă. Conturează ușor pomeții și adaugă un iluminator pe zonele înalte ale feței. Fardul de obraz va da un aspect proaspăt. Definește ochii cu farduri neutre, eyeliner și mascara, iar sprâncenele trebuie să fie naturale și bine definite. Încheie cu un ruj sau gloss și nu uita de un spray fixator pentru un machiaj de durată.">Citește mai mult</button>
+      </article>
+
+
+      <article class="card">
+        <img src="skincare1.webp" alt="Îngrijirea pielii" class="card-img">
+        <h2>Îngrijirea pielii</h2>
+        <p>Îngrijirea pielii este fundamentală pentru a menține un ten sănătos și luminos. O rutină corectă ajută nu doar la curățarea și hidratarea pielii, dar și la prevenirea semnelor de îmbătrânire. Este important să alegi produsele potrivite pentru tipul tău de ten și să le aplici corect pentru a obține cele mai bune rezultate.</p>
+        <button class="btn" data-info="Rutina zilnică de îngrijire include curățare, hidratare și protecție solară. Pentru curățare, La Roche-Posay Toleriane Hydrating Cleanser este ideal pentru un ten sensibil. După curățare, aplică Estée Lauder Advanced Night Repair pentru reparare și hidratare intensă. Continuă cu Embryolisse Lait-Crème Concentré, care hidratează și protejează pielea pe parcursul zilei. Nu uita de protecția solară: La Roche-Posay Anthelios Ultra-Light Fluid SPF 50+ este perfect pentru a proteja pielea de razele UV.">Descoperă mai mult</button>
+      </article>
+
+
+      <article class="card">
+        <img src="parfum1.webp" alt="Parfumuri" class="card-img">
+        <h2>Parfumuri rafinate</h2>
+        <p>Alege parfumul care reflectă cel mai bine personalitatea și stilul tău. Fie că preferi note florale, lemnoase sau citrice, parfumul pe care îl alegi este un accesoriu esențial care îți completează imaginea și îți lasă o impresie de neuitat. Descoperă aroma care îți subliniază unicitatea și care te face să te simți încrezătoare și autentică.</p>
+        <button class="btn" data-info="Parfumurile rafinate sunt o reflecție a eleganței și a personalității tale. Alegerea unui parfum potrivit poate transforma întreaga atmosferă și te poate face să te simți încrezătoare și specială. Un parfum rafinat adaugă o notă de sofisticare și este perfect pentru orice ocazie, fie că e vorba de o seară elegantă sau o zi deosebită.
+        Pentru un parfum floral și elegant, Chanel No. 5 este un clasic ce nu se demodează niciodată. Tom Ford Black Orchid este ideal pentru un parfum oriental, intens și seducător. Dacă îți dorești ceva fresh și ușor, Jo Malone London English Pear & Freesia oferă o notă delicată, dar rafinată. Pentru un parfum cu o aromă sofisticată și lemnoasă, Creed Aventus este o alegere perfectă pentru a atrage atenția într-un mod subtil și elegant.">Explorează</button>
+      </article>
+    </section>    
+
+    <!-- Social media links -->
+    <div class="social-media-links">
+      <h3><span class="heart">❤️</span> Urmărește-mă pe rețelele sociale <span class="heart">❤️</span></h3>
+      <ul class="social-links">
+        <li><a href="https://www.instagram.com/julia.elennaq/" target="_blank">Instagram</a></li>
+        <li><a href="https://ro.pinterest.com/juliaelenabarbu/" target="_blank">Pinterest</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Modal structure -->
+  <div class="modal" id="modal">
+    <p>Informații suplimentare despre subiectul selectat.</p>
+    <button id="closeModal">Închide</button>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <footer>
+    <p>&copy; 2025 Barbu Julia-Elena - Colegiul I.C. Brătianu. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html>

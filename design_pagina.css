@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ea22b8;
+  color: #fff;
+  padding-top: 100px; /* Adăugăm o marjă la top pentru a lăsa loc header-ului fixat */
+  min-height: 100vh; /* Asigură-te că pagina are o înălțime minimă completă */
+  padding-bottom: 110px; /* Adăugăm spațiu pentru footer */
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adăugăm un efect subtil de umbră */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.nav_logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav_logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav_link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.hero {
+  height: auto; /* Folosim auto pentru ca înălțimea să se ajusteze în funcție de conținut */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 20px; /* Ajustăm paddingul pentru a nu apărea prea mult spațiu în partea de sus */
+}
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.text-ascuns {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.vezi-mai-multe {
+  background: #ff44c4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.vezi-mai-multe:hover {
+  background: #ff2b8c;
+}
+/*EDITAREA IMAGINILOR PAGINA PRINCIPALA*/
+.poze-container {
+  display: flex;
+  justify-content: space-around; /* Spațiu uniform între imagini */
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.poza {
+  border: 4px solid #f0e6f6; /* Bordură fină, colorată în tonuri de lavandă pentru un aspect elegant */
+  border-radius: 15px; /* Colțuri rotunjite */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Efect subtil de umbră */
+  overflow: hidden; /* Ascunde orice depășire a imaginii în afacerea chenarului */
+  width: 30%; /* Dimensiune uniformă pentru fiecare imagine */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecte de animare la hover */
+}
+
+.poza:hover {
+  transform: scale(1.05); /* Efect de mărire */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Umbra devine mai puternică la hover */
+}
+
+.poza img {
+  width: 100%; /* Imaginile se vor ajusta la lățimea containerului */
+  height: auto; /* Păstrează proporțiile imaginilor */
+  border-radius: 15px; /* Colțuri rotunjite pentru imagini */
+}
+
+.poza img:hover {
+  opacity: 0.9; /* Când dai hover pe imagine, se va face un pic mai transparent pentru un efect delicat */
+}
+
+.poza a {
+  display: block;
+  text-decoration: none; /* Îndepărtează sublinierea link-ului */
+}
+
+.poza a:hover {
+  opacity: 0.8; /* Se face puțin mai transparent la hover */
+}
+
+.imagine-chin {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.chena {
+  flex: 1;
+}
+
+.imagine {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.poza .text-sub-imagine {
+  position: absolute;
+  bottom: 10px; /* Plasează textul mai jos, aproape de baza imaginii */
+  left: 50%;
+  transform: translateX(-50%); /* Centrarea textului orizontal */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent pentru contrast */
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.poza:hover .text-sub-imagine {
+  opacity: 1; /* Face textul vizibil la hover pe imagine */
+}
+/*textul despre mine, introducerea mea*/
+.despre-mine {
+  text-align: center;
+  margin-top: 40px;
+  padding: 40px;
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.despre-mine h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.despre-mine p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+/*bara de jos*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*!!!!!!!!Calatorii pagina!!!!!!!*/
+/*titlu stilizat*/
+.calatorii-intro {
+  text-align: center;
+  color: #5a3c2f;
+  margin: 20px 0;
+}
+
+.calatorii-intro h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.calatorii-intro p {
+  font-size: 1.2rem;
+  color: #7b5c50;
+}
+/* Stiluri pentru rubrici */
+.rubrici {   
+  margin: 40px auto;   
+  padding: 20px;   
+  max-width: 900px;   
+  border-radius: 15px;   
+  background: rgba(255, 255, 255, 0.1);   
+  backdrop-filter: blur(10px); 
+}  
+
+.rubrica {   
+  margin-bottom: 20px;   
+  border: 1px solid rgba(255, 255, 255, 0.3);   
+  border-radius: 10px;   
+  overflow: hidden;   
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}  
+
+.rubrica:hover {   
+  transform: scale(1.02);   
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+}  
+
+.rubrica-titlu {   
+  font-size: 22px;   
+  font-weight: 500;   
+  background: rgba(0, 0, 0, 0.7);   
+  color: white;   
+  padding: 15px;   
+  cursor: pointer;   
+  display: flex;   
+  justify-content: space-between;   
+  align-items: center; 
+}  
+
+.rubrica-titlu .sageti {   
+  font-size: 18px;   
+  transition: transform 0.3s ease; 
+}  
+
+.rubrica-titlu:hover .sageti {   
+  transform: rotate(180deg); 
+}
+
+/* Stiluri pentru textul rubricii */
+.rubrica-text {   
+  max-height: 0;   
+  overflow: hidden;   
+  opacity: 0;   
+  padding: 0 15px;   
+  background: rgba(255, 255, 255, 0.2);   
+  color: white;   
+  transition: max-height 0.5s ease, opacity 0.5s ease; 
+}
+
+.rubrica.activ .rubrica-text {   
+  max-height: 2000px; /* Ajustabil în funcție de conținut */   
+  opacity: 1;   
+}
+
+/* Stiluri pentru secțiunea de media (imagini și video) */
+.rubrica .media {   
+  margin-top: 20px;   
+  display: flex;   
+  flex-direction: column;   
+  align-items: center; 
+}
+
+.rubrica .rubrica-img {   
+  width: 100%;   
+  margin-top: 20px;   
+  border-radius: 10px;   
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);   
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.rubrica .rubrica-img:hover {   
+  transform: scale(1.05);   
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.rubrica iframe {   
+  margin-top: 20px;   
+  border-radius: 10px; 
+}
+
+/*PAGINA MODA*/
+/*Titlu stilizat*/
+.moda-intro {
+  text-align: center;
+  color: #5a3c2f;
+  margin: 20px 0;
+}
+
+.moda-intro h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.moda-intro p {
+  font-size: 1.2rem;
+  color: #7b5c50;
+}
+/* Stiluri pentru rubrica de pe pagina de modă */
+.moda .rubrici {
+  display: flex;
+  flex-direction: column;  /* Așezăm cardurile pe verticală */
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.moda .rubrica {
+  width: 80%;  /* Ajustează lățimea cardurilor pentru a se potrivi pe ecran */
+  max-width: 600px;  /* Lățime maximă pentru carduri */
+  margin-bottom: 30px;  /* Distanță între carduri */
+}
+
+.moda .card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(23, 201, 228, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.moda .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.moda .card-img {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.moda .card-content {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.moda .card-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.moda .card-content p {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.moda .read-more {
+  font-size: 1em;
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.moda .read-more:hover {
+  text-decoration: underline;
+}
+/*MODA CONTINUT*/
+/* Ascundem conținutul suplimentar implicit */
+.extra-content {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Stilizare pentru link-ul "Citește mai mult" */
+.read-more {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Efecte de tranziție pentru conținutul suplimentar */
+.extra-content {
+  transition: all 0.3s ease;
+}
+
+/* MODA-slide-show */
+.slideshow-container {
+  position: relative;
+  width: 15%; /* Lățimea slideshow-ului */
+  max-width: 400px; /* Lățimea maximă */
+  margin: auto; /* Centrează slideshow-ul */
+  overflow: hidden; /* Ascunde părțile care depășesc containerul */
+  border: 2px solid #d4af37; /* Contur elegant în nuanță de auriu */
+  border-radius: 15px; /* Colțuri rotunjite pentru un aspect rafinat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Umbră subtilă pentru un efect profesional */
+}
+
+.slide {
+  display: none; /* Ascunde slide-urile inițial */
+}
+
+.slideshow-img {
+  width: 100%; /* Imaginile vor ocupa 100% din lățimea containerului */
+  height: 150; /* Înălțimea va fi proporțională cu lățimea imaginii */
+  object-fit: cover; /* Asigură o potrivire bună a imaginii */
+  border-radius: 10px; /* Colțuri rotunjite pentru imagini */
+}
+
+/* Stiluri pentru efectul de tranziție */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/*PAGINA FRUMUSETE*/
+/* Stiluri specifice pentru frumusete.html */
+.nav_link.active {
+  color: #d4af37; /* Evidențiere rafinată pentru pagina activă */
+  border-bottom: 2px solid #d4af37;
+}
+
+.frumusete-intro {
+  text-align: center;
+  color: #5a3c2f;
+  margin: 20px 0;
+}
+
+.frumusete-intro h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.frumusete-intro p {
+  font-size: 1.2rem;
+  color: #7a5c50;
+}
+
+/* Carduri elegante */
+/* Stiluri pentru grid-ul cardurilor */
+.frumusete-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Stiluri pentru carduri */
+.card {
+  background: #f9f4f0;
+  border: 2px solid #e7ded8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column; /* Elementele din card vor fi aranjate vertical */
+  justify-content: space-between; /* Spațiu uniform între secțiuni */
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px; /* Adaugă puțin spațiu în interiorul cardului */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Imaginile cardurilor */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Titlurile cardurilor */
+.card h2 {
+  font-family: 'Garamond', serif;
+  font-size: 1.5rem;
+  color: #5a3c2f;
+  margin: 10px 0;
+  flex-grow: 1; /* Alungă titlul dacă există mai mult text */
+}
+
+/* Descrierile cardurilor */
+.card p {
+  font-size: 1rem;
+  color: #7a5c50;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Menține descrierile flexibile pentru spațiere uniformă */
+}
+
+/* Butoanele */
+.btn {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Centrează butonul în cadrul cardului */
+}
+
+.btn:hover {
+  background-color: #b5932c;
+}
+
+/* Frumusete-buton citeste mai mult marit */
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 70%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+.modal.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Culoare text pentru a fi vizibil */
+.modal p {
+  color: #333; /* Gri închis pentru text */
+  font-size: 1.2rem; /* Ajustează dimensiunea fontului dacă este necesar */
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+}
+
+.modal-backdrop.show {
+  display: block;
+}
+
+#closeModal {
+  margin-top: 10px;
+  background: #ff7675;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*Social media*/
+.social-media-links {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social-media-links h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.heart {
+  font-size: 28px;
+  color: red;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
